@@ -1,0 +1,105 @@
+#=============================================================================
+# dark_powered.toml --- dark powered configuration example for SpaceVim
+# Copyright (c) 2016-2020 Wang Shidong & Contributors
+# Author: Wang Shidong < wsdjeg at 163.com >
+# URL: https://spacevim.org
+# License: GPLv3
+#=============================================================================
+
+# All SpaceVim option below [option] section
+[options]
+    colorscheme = "space_vim_theme"
+    colorscheme_bg = "dark"
+    enable_guicolors = true
+    statusline_separator = "fire"
+    statusline_iseparator = "arrow"
+    buffer_index_type = 4
+    enable_tabline_filetype_icon = true
+    enable_statusline_mode = true
+    filemanager = "vimfiler"
+    statusline_left_sections = [
+      'winnr',
+      'major mode'
+      'filename'
+      'fileformat'
+      'version control info'
+      'search status'
+    ]
+    statusline_right_sections = [
+      'percentage'
+      'time'
+    ]
+    disabled_plugins = ["vimfiler.vim"]
+
+
+
+#=============================================================================
+    
+# Enable autocomplete layer
+[[layers]]
+    name = 'autocomplete'
+    auto_completion_return_key_behavior = "complete"
+    auto_completion_tab_key_behavior = "smart"
+[[layers]]
+    name = 'git'
+    git_plugin = 'gita'
+[[layers]]
+    name = 'VersionControl'
+[[layers]]
+    name = 'incsearch'
+[[layers]]
+    name = "core#statusline"
+[[layers]]
+    name = "ui"
+[[layers]]
+    name = 'lang#python'
+    python_interpreter = '/usr/local/bin/python3'
+    format_on_save = true
+    enabled_linters = ['pylint']
+[[layers]]
+    name = "lang#dockerfile"
+[[layers]]
+    name = 'lang#javascript'
+    format_on_save = true
+[[layers]]
+    name = 'shell'
+    default_position = 'bottom'
+    default_height = 30
+
+#=============================================================================
+
+# My Custom Plugins
+[[custom_plugins]]
+    name = "norcalli/nvim-colorizer.lua"
+    merged = false
+[[custom_plugins]]
+    name = "frazrepo/vim-rainbow"
+    merged = false
+[[custom_plugins]]
+    repo = 'liuchengxu/space-vim-theme'
+    name = 'space_vim_theme'
+    merged = false
+[[custom_plugins]]
+    name = 'tpope/vim-scriptease'
+    merged = 0
+    on_cmd = 'Scriptnames'
+[[custom_plugins]]
+    repo = "https://github.com/lambdalisue/vim-gita"
+    merged = 0
+[[custom_plugins]]
+    repo = "https://github.com/tpope/vim-fugitive"
+    merged = 0
+[[custom_plugins]]
+    repo = "https://github.com/junegunn/fzf.vim"
+    merged = 0
+[[custom_plugins]]
+    repo = "https://github.com/junegunn/fzf"
+    merged = 0
+[[custom_plugins]]
+    repo = "https://github.com/Yggdroot/indentLine"
+    merged = 0
+[[custom_plugins]]
+    repo = "https://github.com/airblade/vim-gitgutter"
+    merged = 0
+
+
